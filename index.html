@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kanban Board</h1>
+        
+        <div class="controls">
+            <label for="groupBy">Group By:</label>
+            <select id="groupBy" onchange="groupTickets()">
+                <option value="status">Status</option>
+                <option value="user">User</option>
+                <option value="priority">Priority</option>
+            </select>
+            
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy" onchange="sortTickets()">
+                <option value="priority">Priority</option>
+                <option value="title">Title</option>
+            </select>
+        </div>
+        
+        <div id="kanban-board" class="kanban-board">
+            <!-- Tickets will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
